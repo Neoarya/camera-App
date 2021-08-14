@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-image: url("2042159.jpg");
+    /* background-color: black; */
+    background-size: cover;
+}
+
+.video-container{
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+}
+
+#record{
+    top: 18rem;
+    cursor: pointer;
+
+}
+
+#capture{
+    bottom: 15rem;
+    cursor: pointer;
+
+}
+
+#gallery{
+    bottom: 1rem;
+    background-image: url("1.jfif");
+    background-size: cover;
+    cursor: pointer;
+
+
+}
+
+button{
+    position: fixed;
+    left: 81rem;
+    border-radius: 70px;
+    height: 6rem;
+    width: 6rem;
+    border: 7px solid white;
+    background:black;
+    z-index: 3;
+}
+
+
+button span{
+    height: 42%;
+    width: 46%;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#record span{
+    background-color: red;
+}
+#capture span{
+    background-color: white;
+}
+
+.filters{
+    height: 15em;
+    width: 4em;
+    position: fixed;
+    top: 7vh;
+    left: 11rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+
+}
+.filter{
+    border: 1px solid white;
+    flex-grow: 1;
+    background-image: url("https://slm-assets.secondlife.com/assets/3789237/lightbox/512x512%20PNG%20Landscape%20Texture%20-%20Dandelion%20Field.jpg?1308962739");
+    background-size: cover;
+    background-blend-mode: color-burn;
+    cursor: pointer;
+
+}
+
+.zoom{
+    height: 8rem;
+    width: 4rem;
+    position: fixed;
+    top: 15vh;
+    right: 10rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+
+}
+.zoom div{
+    background: #db1111;
+    flex-grow: 1;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    font-family: cursive;
+}
+.in{
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.in:hover{
+    background-color: #613939;
+}
+
+.out{
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.out:hover{
+    background-color: #613939;
+}
+.filter-div{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
+.capture-animation{
+    animation: shrinkDownUp;
+    animation-duration: 0.2s;
+
+}
+
+.record-animation{
+    animation: shrinkDownUp;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shrinkDownUp {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+
+    }
+
+    
+}
